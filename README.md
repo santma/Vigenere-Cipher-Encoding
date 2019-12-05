@@ -73,7 +73,7 @@ Vigenere cipher is basic a way to encrypt alphabetical text. Here is a step-by-s
                             for i in range(0,len(position)):
                             encrypt.append((position[i] + K[i])%26)
         
-        Now we have a list of numbers that correspond to the encrypted message. Now we convert this into a list of letters called 'ciphertext', which we convert back to a string called 'encrypted_message'. Note: I cannot remember why I put 'c + 97', but I'll edit when it comes to me.
+        Now we have a list of numbers that correspond to the encrypted message. We convert this into a list of letters called 'ciphertext', which we convert back to a string called 'encrypted_message'. We are using the American Standard Code for Information Interchange (ASCII) to convert these numbers back to letters. This is why for each letter i we add 97. The alphabet in the ASCII code table starts at 97. You can check out the full ASCII table at www.ascii-code.com. 
         
                            ciphertext = []
                            for i in encrypt:
