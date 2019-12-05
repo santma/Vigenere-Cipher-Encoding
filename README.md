@@ -1,5 +1,5 @@
 # Vigenere-Cipher-Encoding:
-A cryptography exercise in python for a data security course.
+A cryptography exercise in python for a data security course. The made objective here is to understand how Vigenere-Cipher Encoding works, and to practice some python. The code makes use of the ASCII library, which stands for American Standard Code for Information Interchange. It is a table with symbols translated to numbers for computation. www.ascii-code.com
 
 ##  What is Vigenere Cipher Encoding?
 Vigenere cipher is basic a way to encrypt alphabetical text. Here is a step-by-step in plain English: 
@@ -24,18 +24,18 @@ Vigenere cipher is basic a way to encrypt alphabetical text. Here is a step-by-s
 
 4. Then, apply some formula using each key number to the corresponding number in the groups. Let's use arithmetic.
 
-                  19+5 7+2 8+8 18+10 | 8+5 18+2 17+8 4+14 | ......
+                  19+5 7+2 8+8 18+10 | 8+5 18+2 17+8 4+10 | ......
                   
       But, we must do our calculations in modulo 26, which is means that when you surpass 26 or multiples of 26, you just go back to 0. The modulo is that fun % symbol in programming.
       For the example above, 18 + 10 = 28 % 26 = 2. (In our case it is 2, since our index starts at A = 0). 
 
       So now we have this:
       
-                  24 9 16 2 | 13 20 25 16 | 5 13 19 8 | 9 2 0 8
+                  24 9 16 2 | 13 20 25 14 | 5 13 19 8 | 9 2 0 8
                   
 5. Finally, we change the numbers back to letters again:
         
-        THISISREALLYEASY --> YJQCNUZQFNTIJCAI
+        THISISREALLYEASY --> YJQCNUZOFNTIJCAI
         
 6. To decrypt, you do the exact same thing but with the reverse function. This assumes that you know what the key is. If you do not know what the key is, then you need some more analysis of the ecrypted text dealing with distributions of the letters and probabilities of letter combinations. Some methods for this to Google are "Kasiski" test to find the "Index of Coincidence". I'll keep it basic for now, since this is mostly a Python exercise. So for the time being, the key is known.
 
